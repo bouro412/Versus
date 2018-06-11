@@ -9,16 +9,16 @@
 
 (defsystem versus
   :version "0.1"
-  :author ""
+  :author "Keita Watanabe"
   :license ""
-  :depends-on ()
+  :depends-on (:lispbuilder-sdl :split-sequence :iterate :alexandria :closer-mop)
   :components ((:module "src"
                 :components
                 ((:file "versus"))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames
-                             #p"README.markdown"
+                             #p"README.org"
                              (or *load-pathname* *compile-file-pathname*))
                             :if-does-not-exist nil
                             :direction :input)
