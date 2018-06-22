@@ -14,7 +14,9 @@
   :depends-on (:lispbuilder-sdl :split-sequence :iterate :alexandria :closer-mop)
   :components ((:module "src"
                 :components
-                ((:file "versus"))))
+                ((:file "view")
+                 (:file "app"))))
+  
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames

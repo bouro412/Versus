@@ -1,7 +1,10 @@
 (in-package :cl-user)
-(defpackage versus
-  (:use :cl :lispbuilder-sdl))
-(in-package :versus)
+(defpackage versus.app
+  (:use :cl :lispbuilder-sdl)
+  (:import-from :versus.view
+   :view-update)
+  (:export main))
+(in-package :versus.app)
 
 
 ;; main function
@@ -13,4 +16,4 @@
       (:key-down-event (:key key)
                        (if (sdl:key= key :sdl-key-escape)
                            (sdl:push-quit-event)))
-      (:idle ))))
+      (:idle (view-update)))))
