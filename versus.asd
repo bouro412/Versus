@@ -14,7 +14,9 @@
   :depends-on (:lispbuilder-sdl :split-sequence :iterate :alexandria :closer-mop)
   :components ((:module "src"
                 :components
-                ((:file "view")
+                ((:file "util")
+                 (:file "keystate")
+                 (:file "view")
                  (:file "app"))))
   
   :description ""
